@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'icons/x.png' %}">
+</head>
+<body>
+    <style>
+        table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 70%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  border-inline-color: black;
+  border-color: black;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+        body {
+            margin: 0px;
+            padding: 0px;
+            background-color: rgb(92, 185, 214);
+        }
+        .container {
+            margin: auto;
+            text-align: center;
+            justify-content: center;
+           
+            
+        }
+
+        .post {
+            border: 4px rgb(0, 0, 0) solid;
+            margin: 3px;
+            text-align: center;
+            background-color: rgb(255, 255, 255);
+        
+        }
+
+        .post-list {
+            justify-items: center;
+            justify-content: center;
+            display: inline-block;
+        }
+
+        h4 {
+            padding: 45px;
+            font-size: 24px;
+            
+        }
+        h1 {
+            font-size: 66px;
+            font-style: initial;
+            background-color: rgb(240, 112, 86);
+            color: rgb(0, 0, 0);
+            
+        }
+        
+    </style>
+    <div class="container">
+        <h1>Twitter: {{post.title}} Details</Details> </h1>
+        <div class="post-details">
+            <table>
+                <tr>
+                    <td>Title</td>
+                    <td>{{post.title}}</td>
+                
+                </tr>
+                <tr>
+                    <td>Description</td>
+                    <td>{{post.description}}</td>
+                
+                </tr>
+                <tr>
+                    <td>Date Created</td>
+                    <td>{{post.posted_at}}</td>
+                
+                </tr>
+            </table>
+            
+        </div>
+    </div>
+</body>
+</html>

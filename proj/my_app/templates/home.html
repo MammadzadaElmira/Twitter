@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'icons/x.png' %}">
+</head>
+<body>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            background-color: rgb(92, 185, 214);
+        }
+        .container {
+            margin: auto;
+            text-align: center;
+            justify-content: center;
+           
+            
+        }
+
+        .post {
+            border: 4px rgb(0, 0, 0) solid;
+            margin: 3px;
+            text-align: center;
+            background-color: rgb(255, 255, 255);
+        
+        }
+
+        .post-list {
+            justify-items: center;
+            justify-content: center;
+            display: inline-block;
+        }
+
+        h4 {
+            padding: 45px;
+            font-size: 24px;
+            
+        }
+        h1 {
+            font-size: 66px;
+            font-style: initial;
+            background-color: rgb(240, 112, 86);
+            color: rgb(0, 0, 0);
+            
+        }
+        
+    </style>
+    <div class="container">
+        <h1>Twitter</h1>
+        <div class="post-list">
+            {% for p in posts %}
+            <a href="twit/{{ p.id }}">
+                <div class="post">
+                    <h4>{{ p.title }}</h4>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
